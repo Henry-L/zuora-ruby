@@ -31,6 +31,7 @@ module Zuora
           request.url SOAP_API_URI
           request.headers['Content-Type'] = 'text/xml'
           request.body = body.to_xml
+          puts request.body
         end
 
         # Handle rate limiting
