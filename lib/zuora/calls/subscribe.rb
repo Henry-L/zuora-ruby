@@ -51,7 +51,7 @@ module Zuora
           build_object(builder, :Subscription, subscription)
           builder[:api].RatePlanData do
             build_object(builder, :RatePlan, rate_plan)
-            builder[:api].RatePlanDataChargeData do
+            builder[:api].RatePlanChargeData do
               build_object(builder, :RatePlanCharge, rate_plan_charge)
             end
           end
