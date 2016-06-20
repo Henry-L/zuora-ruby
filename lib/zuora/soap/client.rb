@@ -54,7 +54,6 @@ module Zuora
         factory = Zuora::Dispatcher.send call_name
         xml_builder = factory.new(*args).xml_builder
         request_data = envelope_for call_name, xml_builder
-        puts request_data
         request! request_data
       end
 
