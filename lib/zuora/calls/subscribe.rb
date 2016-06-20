@@ -8,6 +8,7 @@ module Zuora
       property :subscribe_options
       property :subscription
       property :rate_plan
+      property :rate_plan_charge_data
 
       SIMPLE_OBJECTS = [:account, :payment_method, :bill_to_contact].freeze
 
@@ -50,6 +51,7 @@ module Zuora
           build_object(builder, :Subscription, subscription)
           builder[:api].RatePlanData do
             build_object(builder, :RatePlan, rate_plan)
+            build_object(builder, :RatePlanChargeData, rate_plan_charge_data)
           end
         end
       end
