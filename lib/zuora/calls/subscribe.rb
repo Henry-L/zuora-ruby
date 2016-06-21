@@ -3,7 +3,7 @@ module Zuora
     class Subscribe < Hashie::Dash
       property :account, required: true
       property :payment_method
-      property :bill_to_contact, required: true
+      property :bill_to_contact
       property :sold_to_contact
       property :subscribe_options
       property :subscription
